@@ -137,7 +137,7 @@ async function main() {
     passport.use(new GoogleStrategy({
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: "http://localhost:5000/auth/google/callback",
+        callbackURL: "https://raffle-ej18.onrender.com/auth/google/callback",
         // callbackURL: "http://localhost:5000/auth/google/callback",
         userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
       },
@@ -174,7 +174,7 @@ async function main() {
           {
             clientID: process.env.FACEBOOK_APP_ID,
             clientSecret: process.env.FACEBOOK_APP_SECRET,
-            callbackURL: 'https://ticket-app-zxnm.onrender.com/auth/facebook/callback',
+            callbackURL: 'https://raffle-ej18.onrender.com/auth/facebook/callback',
             profileFields: ['id', 'displayName', 'email', 'photos'],
           },
           async function(accessToken, refreshToken, profile, cb) {
